@@ -1,12 +1,13 @@
 import Head from 'next/head'
 import Header from './Header'
 import Banner from './Banner'
+import Navigation from './Navigation'
 
 export default function Layout({ children, pageTitle, ...props }) {
   return (
     <>
       <Head>
-        <meta key="charset" charset="utf-8" />
+        <meta key="charset" charSet="utf-8" />
         <meta key="description" name="description" content="Rodrigo Boniatti | Software Engineer | Ruby on Rails | Python | Go | JavaScript " />
         <meta key="author" name="author" content="Rodrigo Boniatti" />
         <link key="icon" rel="shortcut icon" type="type/png" href="/favicon.png" />
@@ -14,8 +15,8 @@ export default function Layout({ children, pageTitle, ...props }) {
         <title>Rodrigo Boniatti</title>
       </Head>
       <section className="layout">
-        <Header />
         <Banner />
+        <Navigation />
         <div className="content">{children}</div>
       </section>
 

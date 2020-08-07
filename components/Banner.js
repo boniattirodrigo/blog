@@ -13,7 +13,7 @@ export default function Banner() {
     styles.cartoonDrinkingCoffee
   ]
 
-  useEffect(() => setRandomNumber(Math.floor(Math.random() * cartoons.length)));
+  useEffect(() => setRandomNumber(Math.floor(Math.random() * cartoons.length)), []);
 
   return (
     <header className={styles.header} role="banner">

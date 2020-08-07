@@ -1,15 +1,11 @@
 import matter from 'gray-matter'
 import Layout from '../components/Layout'
-import PostList from '../components/PostList'
+import About from '../components/About'
 
 const Index = ({ posts, title, description, ...props }) => {
   return (
     <Layout pageTitle={title}>
-      <h1 className="title">Welcome to my blog!</h1>
-      <p className="description">{description}</p>
-      <main>
-        <PostList posts={posts} />
-      </main>
+      <About />
     </Layout>
   )
 }

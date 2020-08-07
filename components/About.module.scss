@@ -1,0 +1,24 @@
+.sectionAbout {
+	img {
+		float: right;
+		margin: -20px auto 0;
+	}
+}
+
+@media (max-width: 760px) {
+	.sectionAbout {
+		img {
+			display: block;
+			float: none;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	.sectionAbout {
+		img {
+			width: 140px;
+		}
+	}
+}

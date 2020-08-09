@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-
 import Layout from '../../components/Layout'
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
@@ -26,7 +25,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
 export async function getStaticProps({ ...ctx }) {
   const { postname } = ctx.params
 
-  const content = await import(`../../posts/${postname}.md`)
+  const content = await import(`../../blog/${postname}.md`)
   const config = await import(`../../siteconfig.json`)
   const data = matter(content.default)
 
@@ -48,9 +47,9 @@ export async function getStaticPaths() {
       return slug
     })
     return data
-  })(require.context('../../posts', true, /\.md$/))
+  })(require.context('../../blog', true, /\.md$/))
 
-  const paths = blogSlugs.map((slug) => `/post/${slug}`)
+  const paths = blogSlugs.map((slug) => `/blog/${slug}`)
 
   return {
     paths,

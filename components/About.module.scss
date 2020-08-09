@@ -1,24 +1,21 @@
-.sectionAbout {
-	img {
-		float: right;
-		margin: -20px auto 0;
-	}
+div.SectionOverride {
+  padding-top: 60px;
 }
 
-@media (max-width: 760px) {
-	.sectionAbout {
-		img {
-			display: block;
-			float: none;
-			margin: 0 auto;
-		}
-	}
+.Container {
+  display: flex;
+  justify-content: center;
 }
 
-@media (max-width: 520px) {
-	.sectionAbout {
-		img {
-			width: 140px;
-		}
-	}
+.Cartoon {
+  display: flex;
+  width: 30%;
+  min-width: 220px;
+  padding-right: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.Description {
+  width: 50%
 }

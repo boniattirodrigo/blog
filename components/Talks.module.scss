@@ -1,0 +1,13 @@
+.mySection {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.myContainer {
+  display: flex;
+  justify-content: space-between;
+
+  & > div {
+    width: 30%;
+  }
+}

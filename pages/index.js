@@ -1,11 +1,13 @@
 import matter from 'gray-matter'
 import Layout from '../components/Layout'
 import About from '../components/About'
+import Talks from '../components/Talks'
 
 const Index = ({ posts, title, description, ...props }) => {
   return (
     <Layout pageTitle={title}>
       <About />
+      <Talks />
     </Layout>
   )
 }

@@ -47,24 +47,6 @@ figure {
 	margin: 0;
 }
 
-//
-// Helpers: Helpers
-// ----------------------------------------------------------------------------
-
-// Clearfix
-// ----------------------------------------------
-
-.clearfix:before,
-.clearfix:after {
-	content: "";
-	display: table;
-}
-
-.clearfix:after {
-	clear: both;
-}
-
-
 // Image replacement
 // ----------------------------------------------
 
@@ -498,23 +480,6 @@ optgroup {
   font-weight: bold;
 }
 
-/* Tables
-   ========================================================================== */
-
-/**
- * Remove most spacing between table cells.
- */
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-}
-
 //
 // Elements: Grid
 // ----------------------------------------------------------------------------
@@ -598,7 +563,7 @@ body {
 
 h2 {
 	margin: 0;
-	padding-bottom: .84em;
+	padding-bottom: 1em;
 	line-height: 1em;
 	font-family: "Source Sans Pro", "Open Sans", sans-serif;
 	font-size: 3em;
@@ -615,13 +580,6 @@ h3 {
 	font-size: 1.333333333em;
 	font-weight: 600;
 	color: #2d2929;
-}
-
-.highlighter-rouge {
-  margin-top: 20px;
-  padding: 2px 15px;
-	background: #444;
-  color: #fff;
 }
 
 .blog {

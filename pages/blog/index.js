@@ -7,12 +7,15 @@ const Index = ({ posts, title, description, ...props }) => {
     <>
       <Layout>
         <div>
-          <h2>Hey</h2>
+          <h2>blog</h2>
 
           { posts.map(post => (
-            <Link href="/blog/[slug]" key={post.slug} as={`/blog/${post.slug}`}>
-              <a>{ post.frontmatter.title }</a>
-            </Link>
+            <div>
+              <Link href="/blog/[slug]" key={post.slug} as={`/blog/${post.slug}`}>
+                <h2><a>{ post.frontmatter.title }</a></h2>
+              </Link>
+              <p>{ post.frontmatter.short_description }</p>
+            </div>
           )) }
         </div>
       </Layout>

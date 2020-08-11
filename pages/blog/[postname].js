@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../../components/Layout'
@@ -8,12 +7,8 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
 
   return (
     <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
-      <Link href="/">
-        <a>Back to post list</a>
-      </Link>
       <article>
         <h1>{frontmatter.title}</h1>
-        <p>By {frontmatter.author}</p>
         <div>
           <ReactMarkdown source={markdownBody} />
         </div>

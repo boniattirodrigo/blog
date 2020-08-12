@@ -2,5 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 20px 40px;
+	width: 100%;
+	max-width: 1024px;
+  margin: 0 auto;
+  padding: 60px 40px;
 }

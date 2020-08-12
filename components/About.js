@@ -4,7 +4,7 @@ import Section from './Section'
 export default function About() {
   return (
     <>
-      <Section className={styles.SectionOverride}>
+      <Section>
         <h2>About</h2>
 
         <div className={styles.Container}>

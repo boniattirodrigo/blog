@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Banner from './Banner'
 import Navigation from './Navigation'
-import styles from './Layout.module.scss'
 
 export default function Layout({ children, pageTitle }) {
   return (
@@ -18,7 +17,7 @@ export default function Layout({ children, pageTitle }) {
       <section>
         <Banner />
         <Navigation />
-        <main className={styles.Container}>
+        <main>
           { children }
         </main>
       </section>

@@ -1,22 +1,29 @@
 import matter from 'gray-matter'
 import Link from 'next/link'
-import Layout from '../../components/Layout'
+import styles from './Blog.module.scss'
+import Layout from 'components/Layout'
+import Section from 'components/Section'
+import Article from 'components/Article'
 
 const Index = ({ posts, title, description, ...props }) => {
   return (
     <>
-      <Layout>
-        <div>
-          <h2>blog</h2>
+      <Layout showBanner={false} pageTitle="Rodrigo Boniatti | Blog">
+        <div className={styles.Container}>
+          <Section className={styles.SectionOverride}>
+            <h2>blog</h2>
 
-          { posts.map(post => (
-            <div>
-              <Link href="/blog/[slug]" key={post.slug} as={`/blog/${post.slug}`}>
-                <h2><a>{ post.frontmatter.title }</a></h2>
-              </Link>
-              <p>{ post.frontmatter.short_description }</p>
-            </div>
-          )) }
+            { posts.map(post => (
+              <Article key={post.slug}>
+                <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
+                  <h2><a>{ post.frontmatter.title }</a></h2>
+                </Link>
+                <p>{ post.frontmatter.short_description }</p>
+              </Article>
+            )) }
+
+          </Section>
+          <img src="/img/background-footer.png" className={styles.Montain} />
         </div>
       </Layout>
     </>

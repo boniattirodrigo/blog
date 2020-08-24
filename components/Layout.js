@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Banner from './Banner'
 import Navigation from './Navigation'
 
-export default function Layout({ children, pageTitle }) {
+export default function Layout({ children, pageTitle, showBanner }) {
   return (
     <>
       <Head>
@@ -11,11 +11,11 @@ export default function Layout({ children, pageTitle }) {
         <meta key="author" name="author" content="Rodrigo Boniatti" />
         <link key="icon" rel="shortcut icon" type="type/png" href="/favicon.png" />
         <link key="fonts" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Open+Sans:400,600" />
-        <title>Rodrigo Boniatti | Software Engineer</title>
+        <title>{ pageTitle }</title>
       </Head>
 
       <section>
-        <Banner />
+        { showBanner && <Banner /> }
         <Navigation />
         <main>
           { children }

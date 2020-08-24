@@ -1,11 +1,10 @@
-import Layout from '../components/Layout'
-import About from '../components/About'
-import Talks from '../components/Talks'
-import ContactForm from '../components/ContactForm'
+import Layout from 'components/Layout'
+import About from 'components/About'
+import ContactForm from 'components/ContactForm'
 
 export default function Index() {
   return (
-    <Layout>
+    <Layout showBanner={true} pageTitle="Rodrigo Boniatti | Software Engineer">
       <About />
       <ContactForm />
     </Layout>

@@ -8,6 +8,6 @@ date_short:        "2016-01-28T17:00"
 body:              blog
 ---
 
-Antes de começar a publicar algo por aqui, seria interessante saber que esse projeto bem como suas fontes estão em livre acesso no <a href="https://github.com/boniattirodrigo/boniattirodrigo.github.io" target="_blank">Github</a> e podem ser usadas a vontade.
+Antes de começar a publicar algo por aqui, seria interessante saber que esse projeto bem como suas fontes estão em livre acesso no [GitHub](https://github.com/boniattirodrigo/boniattirodrigo.github.io) e podem ser usadas a vontade.
 
 Espero que o site tenha ficado legal e aceito feedbacks nos comentários. Valeu e até uma próxima.

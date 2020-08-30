@@ -1,18 +1,21 @@
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import Layout from 'components/Layout'
+import Article from 'components/Article'
+import Section from 'components/Section'
+import styles from './Blog.module.scss'
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>
 
   return (
-    <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
-      <article>
-        <h1>{frontmatter.title}</h1>
-        <div>
+    <Layout showBanner={false} mountainLayout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
+      <Section className={styles.SectionOverride}>
+        <h1>{ frontmatter.title }</h1>
+        <Article>
           <ReactMarkdown source={markdownBody} />
-        </div>
-      </article>
+        </Article>
+      </Section>
     </Layout>
   )
 }

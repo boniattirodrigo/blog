@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Banner from './Banner'
 import Navigation from './Navigation'
+import styles from './Layout.module.scss'
 
-export default function Layout({ children, pageTitle, showBanner }) {
+export default function Layout({ children, pageTitle, showBanner, mountainLayout }) {
   return (
     <>
       <Head>
@@ -14,18 +15,17 @@ export default function Layout({ children, pageTitle, showBanner }) {
         <title>{ pageTitle }</title>
       </Head>
 
-      <section>
-        { showBanner && <Banner /> }
-        <Navigation />
-        <main>
-          { children }
-        </main>
-      </section>
+      { showBanner && <Banner /> }
+      <Navigation />
+      <main className={mountainLayout ? styles.MountainContainer : ''}>
+        { children }
+        { mountainLayout && <img src="/img/background-footer.png" className={styles.Montain} /> }
+      </main>
 
       <footer className="footer" role="contentinfo">
         <div className="social-media clearfix">
           <a className="ir social-media__github" href="https://github.com/boniattirodrigo" target="_blank">Github</a>
-          <a className="ir social-media__linkedin" href="https://br.linkedin.com/in/rodrigoboniatti" target="_blank">Linkedin</a>
+          <a className="ir social-media__linkedin" href="https://linkedin.com/in/rodrigoboniatti" target="_blank">Linkedin</a>
           <a className="ir social-media__twitter" href="https://twitter.com/boniattirodrigo" target="_blank">Twitter</a>
         </div>
         <address><a href="mailto:boniatti.rodrigo@gmail.com">boniatti.rodrigo@gmail.com</a></address>

@@ -8,23 +8,22 @@ import Article from 'components/Article'
 const Index = ({ posts, title, description, ...props }) => {
   return (
     <>
-      <Layout showBanner={false} pageTitle="Rodrigo Boniatti | Blog">
-        <div className={styles.Container}>
-          <Section className={styles.SectionOverride}>
-            <h2>blog</h2>
+      <Layout showBanner={false} mountainLayout pageTitle="Rodrigo Boniatti | Blog">
+        <Section className={styles.SectionOverride}>
+          <h2>blog</h2>
 
-            { posts.map(post => (
-              <Article key={post.slug}>
-                <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
-                  <h2><a>{ post.frontmatter.title }</a></h2>
-                </Link>
-                <p>{ post.frontmatter.short_description }</p>
-              </Article>
-            )) }
-
-          </Section>
-          <img src="/img/background-footer.png" className={styles.Montain} />
-        </div>
+          { posts.map(post => (
+            <Link href="/blog/[slug]" as={`/blog/${post.slug}`} key={post.slug}>
+              <a className={styles.PostLink}>
+                <Article key={post.slug}>
+                  <h2>{ post.frontmatter.title }</h2>
+                  <p>{ post.frontmatter.short_description }</p>
+                  <time className={styles.PostDateTime}>{ post.frontmatter.date_long }</time>
+                </Article>
+              </a>
+            </Link>
+          )) }
+        </Section>
       </Layout>
     </>
   )
@@ -47,7 +46,20 @@ export async function getStaticProps() {
         slug,
       }
     })
-    return data
+
+    const sortData = data.sort(function(postA, postB) {
+      if (postA.frontmatter.date_short > postB.frontmatter.date_short) {
+        return -1;
+      }
+
+      if (postA.frontmatter.date_short < postB.frontmatter.date_short) {
+        return 1;
+      }
+
+      return 0;
+    });
+
+    return sortData;
   })(require.context('../../blog', true, /\.md$/))
 
   return {

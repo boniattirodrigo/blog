@@ -16,7 +16,7 @@ body:              blog
 
 If you already work with Decimal in tables, lists or grids and show any times values like 1.0000, 10.0000, 2.0500, 15.0200, because your database column is a decimal and don't need show 0 in decimal values when the number is like this: 1.5000, normalize can help you:
 
-```
+```python
 value = Decimal('1.5000')
 value = value.normalize()
 print(value)
@@ -29,7 +29,7 @@ With normalize you remove excessive 0.
 
 Textwrap help you with strings. Checkout.
 
-```
+```python
 import textwrap
 foo = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque porro architecto optio, nulla officiis, accusamus natus eos eius suscipit.'
 
@@ -45,20 +45,22 @@ textwrap.shorten(bar, width=10, placeholder='...')
 
 ```
 
-<br>
+<br />
+
 **All and any**
 
 Check if all values in your list are true:
 
-```
+```python
 all([True, True, True, False])
 False
 ```
 
-<br>
+<br />
+
 Now, check if any value is true:
 
-```
+```python
 any([True, True, True, False])
 True
 ```

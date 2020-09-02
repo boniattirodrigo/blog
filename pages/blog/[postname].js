@@ -4,6 +4,7 @@ import Layout from 'components/Layout'
 import Article from 'components/Article'
 import Section from 'components/Section'
 import styles from './Blog.module.scss'
+import CodeBlock from 'components/CodeBlock';
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>
@@ -13,7 +14,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
       <Section className={styles.SectionOverride}>
         <h1>{ frontmatter.title }</h1>
         <Article>
-          <ReactMarkdown source={markdownBody} />
+          <ReactMarkdown escapeHtml={false} source={markdownBody} renderers={{ code: CodeBlock }} />
         </Article>
       </Section>
     </Layout>

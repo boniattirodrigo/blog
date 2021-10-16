@@ -13,8 +13,9 @@ export default function About() {
           </div>
           <div className={styles.Description}>
             <p>Hey, my name is Rodrigo Boniatti. I live in Brazil and I work as a software engineer at <a href="https://www.codeminer42.com/" target="_blank">Codeminer 42</a>.</p>
-            <p>I've been working with Ruby and Javascript and other technologies that surround them for some good years. Also, I like to speak in some events and write some posts on my <a href="/blog/">blog</a>.</p>
+            <p>I've been working with Ruby and Javascript and other technologies that surround them for some good years.</p>
             <p>Reach me out if you have any question.</p>
+            <p><a href="https://speakerdeck.com/boniatti" target="_blank">Talks</a> • <a href="https://twitter.com/boniattirodrigo" target="_blank">Twitter</a> • <a href="mailto:boniatti.rodrigo@gmail.com" target="_blank">Email</a></p>
           </div>
         </div>
       </Section>

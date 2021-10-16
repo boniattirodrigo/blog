@@ -22,14 +22,14 @@ export default function Layout({ children, pageTitle, showBanner, mountainLayout
         { mountainLayout && <img src="/img/background-footer.png" className={styles.Montain} /> }
       </main>
 
-      <footer className="footer" role="contentinfo">
+      {/* <footer className="footer" role="contentinfo">
         <div className="social-media clearfix">
           <a className="ir social-media__github" href="https://github.com/boniattirodrigo" target="_blank">Github</a>
           <a className="ir social-media__linkedin" href="https://linkedin.com/in/rodrigoboniatti" target="_blank">Linkedin</a>
           <a className="ir social-media__twitter" href="https://twitter.com/boniattirodrigo" target="_blank">Twitter</a>
         </div>
         <address><a href="mailto:boniatti.rodrigo@gmail.com">boniatti.rodrigo@gmail.com</a></address>
-      </footer>
+      </footer> */}
     </>
   )
 }
